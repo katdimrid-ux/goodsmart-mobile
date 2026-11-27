@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/theme/app_theme.dart';
 import 'screens/splash/splash_screen.dart';
+import 'screens/home/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,14 +19,7 @@ class GoodsMartApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       home: const SplashScreen(
-        nextScreen: Scaffold(
-          body: Center(
-            child: Text(
-              'Bienvenue sur Goods Mart Mobile !',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-          ),
-        ),
+        nextScreen: HomeScreen(),
       ),
     );
   }
